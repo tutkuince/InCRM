@@ -48,6 +48,14 @@
 			<version>5.3.3.Final</version>
 		</dependency>
 
+		<!-- Hibernate Connection Pool -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>5.3.3.Final</version>
+		</dependency>
+
+
 		<!-- JUnit -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
