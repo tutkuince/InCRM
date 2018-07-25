@@ -31,7 +31,7 @@ public class HibernateConfig implements TransactionManagementConfigurer{
 		dataSource.setPassword("123456.");
 
 		// These are connection pool properties for C3P0
-		dataSource.setMinPoolSize(5);
+		dataSource.setMinPoolSize(3);
 		dataSource.setMaxPoolSize(20);
 		dataSource.setMaxIdleTime(30000);
 
@@ -45,7 +45,7 @@ public class HibernateConfig implements TransactionManagementConfigurer{
 		bean.setPackagesToScan("com.mdtsoft.model");
 
 		Properties properties = new Properties();
-		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL8Dialect");
 		properties.setProperty("hibernate.show_sql", "true");
 
 		bean.setHibernateProperties(properties);
