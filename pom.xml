@@ -41,6 +41,13 @@
 			<version>5.0.6.RELEASE</version>
 		</dependency>
 
+		<!-- Spring ORM -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>5.0.6.RELEASE</version>
+		</dependency>
+
 		<!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -63,6 +70,9 @@
 			<version>5.2.0</version>
 			<scope>test</scope>
 		</dependency>
+
+
+
 
 		<!-- JSTL -->
 		<dependency>
