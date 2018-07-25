@@ -2,9 +2,12 @@ package com.mdtsoft.dao;
 
 import java.util.List;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mdtsoft.model.Customer;
 
@@ -13,7 +16,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-	
+
 	@Override
 	public void insert(Customer customer) {
 		// TODO Auto-generated method stub
@@ -27,9 +30,20 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 
 	@Override
+	@Transactional
 	public List<Customer> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+
+		// Get the current hibernate session
+		Session session = sessionFactory.getCurrentSession();
+
+		// create a query
+		Query<Customer> query = session.createQuery("from Customer", Customer.class);
+
+		// execute the query and get result list
+		List<Customer> customerList = query.getResultList();
+
+		// return the results
+		return customerList;
 	}
 
 	@Override
