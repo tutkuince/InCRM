@@ -1,8 +1,8 @@
 package com.mdtsoft.config;
 
+import java.beans.PropertyVetoException;
 import java.util.Properties;
 
-import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
@@ -21,6 +21,12 @@ public class HibernateConfig implements TransactionManagementConfigurer{
 	public ComboPooledDataSource comboPooledDataSource() {
 		ComboPooledDataSource dataSource = new ComboPooledDataSource();
 		dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/inccrm?useSSL=false");
+		try {
+			dataSource.setDriverClass("com.mysql.jdbc.Driver");
+		} catch (PropertyVetoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		dataSource.setUser("root");
 		dataSource.setPassword("123456.");
 
@@ -49,7 +55,7 @@ public class HibernateConfig implements TransactionManagementConfigurer{
 	@Bean
 	public HibernateTransactionManager transactionManager() {
 		HibernateTransactionManager hibernateTransactionManager = new HibernateTransactionManager();
-		hibernateTransactionManager.setSessionFactory((SessionFactory) sessionFactory());
+		hibernateTransactionManager.setSessionFactory(sessionFactory().getObject());
 		return hibernateTransactionManager;
 	}
 
@@ -57,4 +63,5 @@ public class HibernateConfig implements TransactionManagementConfigurer{
 	public PlatformTransactionManager annotationDrivenTransactionManager() {
 		return transactionManager();
 	}
+
 }
