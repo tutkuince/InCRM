@@ -30,7 +30,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 
 	@Override
-	@Transactional
+	// @Transactional move to service layer
 	public List<Customer> getAll() {
 
 		// Get the current hibernate session
