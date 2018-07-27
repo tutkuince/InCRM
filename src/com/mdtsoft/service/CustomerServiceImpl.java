@@ -30,9 +30,9 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
+	@Transactional
 	public Customer getById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return customerDAO.getById(id);
 	}
 
 	@Override
@@ -44,13 +44,13 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public void update(int id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
