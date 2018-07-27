@@ -10,5 +10,5 @@ public interface CustomerService {
 	List<Customer> getAll();
 	void update(int id);
 	void delete(int id);
-	List<Customer> sortByName(List<Customer> customers);
+	List<Customer> sortByName();
 }
