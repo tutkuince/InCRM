@@ -22,13 +22,20 @@ public class CustomerDAOImpl implements CustomerDAO {
 		Session session = sessionFactory.getCurrentSession();
 		
 		// save the customer
-		session.save(customer);
+		// session.save(customer);
+		
+		// saveOrUpdate() -> 	if PK empty then INSERT new customer
+		//						else UPDATE exiting customer
+		session.saveOrUpdate(customer);
 	}
 
 	@Override
 	public Customer getById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		// Get the current hibernate session
+		Session session = sessionFactory.getCurrentSession();
+
+		// read from database using the primary key
+		return session.get(Customer.class, id);
 	}
 
 	@Override
@@ -50,8 +57,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public void update(int id) {
-		// TODO Auto-generated method stub
+		// Get the current hibernate session
 
+		
 	}
 
 	@Override
