@@ -18,7 +18,17 @@
 			<!-- put new button: Add Customer -->
 			<input type="button" value="Add Customer"
 				onclick="window.location.href='showFormForAdd'; return false;"
+				class="add-button"> 
+				
+			<input type="button"
+				value="Sort By Customer Name"
+				onclick="window.location.href='orderedList'; return false;"
 				class="add-button">
+			
+			<input type="button" value="Sort By Customer ID"
+				onclick="window.location.href='list'; return false;"
+				class="add-button">	
+			
 		</div>
 		<table id="customers">
 			<tr>
