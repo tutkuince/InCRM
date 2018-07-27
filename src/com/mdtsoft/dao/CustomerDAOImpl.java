@@ -17,15 +17,15 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private SessionFactory sessionFactory;
 
 	@Override
-	public void insert(Customer customer) {
+	public void save(Customer customer) {
 		// Get the current hibernate session
 		Session session = sessionFactory.getCurrentSession();
-		
+
 		// save the customer
 		// session.save(customer);
-		
-		// saveOrUpdate() -> 	if PK empty then INSERT new customer
-		//						else UPDATE exiting customer
+
+		// saveOrUpdate() -> if PK empty then INSERT new customer
+		// else UPDATE exiting customer
 		session.saveOrUpdate(customer);
 	}
 
@@ -53,13 +53,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 		// return the results
 		return customerList;
-	}
-
-	@Override
-	public void update(int id) {
-		// Get the current hibernate session
-
-		
 	}
 
 	@Override
