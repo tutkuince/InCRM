@@ -23,24 +23,32 @@
 			<input type="button"
 				value="Sort By Customer Name"
 				onclick="window.location.href='orderedList'; return false;"
-				class="add-button">
-			
-			<input type="button" value="Sort By Customer ID"
+				class="add-button"> 
+				
+			<input type="button"
+				value="Sort By Customer ID"
 				onclick="window.location.href='list'; return false;"
-				class="add-button">	
-			
+				class="add-button">
+
 		</div>
 		<table id="customers">
 			<tr>
 				<th>First Name</th>
 				<th>Last Name</th>
 				<th>Email</th>
+				<th>Action</th>
 			</tr>
-			<c:forEach items="${customerList }" var="item">
+			<c:forEach items="${customerList }" var="customer">
+				
+				<c:url var="updateLink" value="/customer/showFormForUpdate" >
+					<c:param name="customerId" value="${customer.id }" />
+				</c:url>
+				
 				<tr>
-					<td>${item.firstName }</td>
-					<td>${item.lastName }</td>
-					<td>${item.email }</td>
+					<td>${customer.firstName }</td>
+					<td>${customer.lastName }</td>
+					<td>${customer.email }</td>
+					<td><a href="${updateLink }">Update</a></td>
 				</tr>
 			</c:forEach>
 		</table>
