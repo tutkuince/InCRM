@@ -1,6 +1,7 @@
 package com.mdtsoft.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,6 +46,15 @@ public class CustomerServiceImpl implements CustomerService {
 	@Transactional
 	public void delete(int id) {
 		customerDAO.delete(id);
+	}
+
+	@Override
+	@Transactional
+	public List<Customer> searchCustomerByName(String name) {
+		List<Customer> customers = getAll().stream().filter(c -> c.getFirstName().trim().equalsIgnoreCase(name.trim()))
+				.collect(Collectors.toList());
+		return customers;
+
 	}
 
 }
