@@ -18,14 +18,10 @@
 			<!-- put new button: Add Customer -->
 			<input type="button" value="Add Customer"
 				onclick="window.location.href='showFormForAdd'; return false;"
-				class="add-button"> 
-				
-			<input type="button"
+				class="add-button"> <input type="button"
 				value="Sort By Customer Name"
 				onclick="window.location.href='orderedList'; return false;"
-				class="add-button"> 
-				
-			<input type="button"
+				class="add-button"> <input type="button"
 				value="Sort By Customer ID"
 				onclick="window.location.href='list'; return false;"
 				class="add-button">
@@ -39,16 +35,25 @@
 				<th>Action</th>
 			</tr>
 			<c:forEach items="${customerList }" var="customer">
-				
-				<c:url var="updateLink" value="/customer/showFormForUpdate" >
+
+				<!-- Construct an "update" link with customerId -->
+				<c:url var="updateLink" value="/customer/showFormForUpdate">
 					<c:param name="customerId" value="${customer.id }" />
 				</c:url>
-				
+
+				<!-- Construct an "delete" link with customerId -->
+				<c:url var="deleteLink" value="/customer/delete">
+					<c:param name="customerId" value="${customer.id }" />
+				</c:url>
+
 				<tr>
 					<td>${customer.firstName }</td>
 					<td>${customer.lastName }</td>
 					<td>${customer.email }</td>
-					<td><a href="${updateLink }">Update</a></td>
+					<td><a href="${updateLink }">Update</a> | <a
+						href="${deleteLink }"
+						onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a>
+					</td>
 				</tr>
 			</c:forEach>
 		</table>
