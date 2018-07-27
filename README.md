@@ -2,14 +2,14 @@
 
 **The aim of this project is to review basic CRUD processes with Spring framework.**
 
-	- Framework
-		- [x] Spring 
-		- [ ] JSP
-		- [ ] JSF
+- Framework
+	- [x] Spring 
+	- [ ] JSP
+	- [ ] JSF
 		
-	- ORM Tool
-		- [x] Hibernate
-		- [ ] JPA
+- ORM Tool
+	- [x] Hibernate
+	- [ ] JPA
 
 There are 7 layers in this project
 	
