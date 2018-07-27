@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,13 +19,22 @@
 			<!-- put new button: Add Customer -->
 			<input type="button" value="Add Customer"
 				onclick="window.location.href='showFormForAdd'; return false;"
-				class="add-button"> <input type="button"
+				class="add-button"> 
+				
+			<input type="button"
 				value="Sort By Customer Name"
 				onclick="window.location.href='orderedList'; return false;"
-				class="add-button"> <input type="button"
+				class="add-button"> 
+				
+			<input type="button"
 				value="Sort By Customer ID"
 				onclick="window.location.href='list'; return false;"
 				class="add-button">
+			
+			<form:form action="search" method="POST">
+				Search Customer By Name <input type="text" name="searchName" placeholder="for all customer write 'all'"/>
+				<input type="submit" value="search" />
+			</form:form>
 
 		</div>
 		<table id="customers">
