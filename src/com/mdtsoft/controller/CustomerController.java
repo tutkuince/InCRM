@@ -32,6 +32,18 @@ public class CustomerController {
 
 		return "list-customers";
 	}
+	
+	@GetMapping("/orderedList")
+	public String orderedListCustomers(Model model) {
+
+		// get customers from the CustomerService
+		List<Customer> customerList = customerService.sortByName();
+
+		// add the customers to the model
+		model.addAttribute("customerList", customerList);
+
+		return "list-customers";
+	}
 
 	@GetMapping("/showFormForAdd")
 	public String showFormForAdd(Model model) {
