@@ -10,4 +10,5 @@ public interface CustomerService {
 	List<Customer> getAll();
 	void delete(int id);
 	List<Customer> sortByName();
+	List<Customer> searchCustomerByName(String name);
 }
