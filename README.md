@@ -13,30 +13,30 @@
 
 There are 7 layers in this project
 	
-	- config
-		- HibernateConfig
-		- SpringConfig
-		- WebServletConfig
+- config
+	- HibernateConfig
+	- SpringConfig
+	- WebServletConfig
 		
-	- controller
-		- CustomerController
+- controller
+	- CustomerController
 		
-	- dao
-		- CustomerDAO
-		- CustomerDAOImpl
+- dao
+	- CustomerDAO
+	- CustomerDAOImpl
 		
-	- model
-		- Customer
+- model
+	- Customer
 		
-	- service
-		- CustomerService
-		- CustomerServiceImpl
+- service
+	- CustomerService
+	- CustomerServiceImpl
 		
-	- test
-		- TestDB
+- test
+	- TestDB
 		
-	- view
-		- customer-from
-		- index
-		- list-customers
+- view
+	- customer-from
+	- index
+	- list-customers
 		
