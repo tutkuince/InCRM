@@ -1,6 +1,6 @@
 # InCRM - Customer Relationship Manager
 
-**  The aim of this project is to review basic CRUD processes with Spring framework. **
+**The aim of this project is to review basic CRUD processes with Spring framework.**
 
 	- Framework
 		- [x] Spring 
@@ -11,7 +11,7 @@
 		- [x] Hibernate
 		- [ ] JPA
 
-There are 7 layer in this project
+There are 7 layers in this project
 	
 	- config
 		- HibernateConfig
