@@ -16,8 +16,9 @@ public class CustomerServiceImpl implements CustomerService {
 	private CustomerDAO customerDAO;
 
 	@Override
-	public List<Customer> sortByName(List<Customer> customers) {
-		customers = customerDAO.getAll();
+	@Transactional
+	public List<Customer> sortByName() {
+		List<Customer> customers = customerDAO.getAll();
 		customers.sort((Customer c1, Customer c2) -> c1.getFirstName().compareTo(c2.getFirstName()));
 		return customers;
 	}
