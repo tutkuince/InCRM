@@ -84,6 +84,20 @@
 			<version>2.3.0</version>
 		</dependency>
 		
+		<!-- SPRING AOP -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>5.0.6.RELEASE</version>
+		</dependency>
+
+		<!-- AspectJ -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.9.1</version>
+		</dependency>
+		
 	</dependencies>
 	
 </project>
