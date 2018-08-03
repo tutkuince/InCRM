@@ -8,17 +8,17 @@ public class AOPExpressions {
 
 	// setup pointcut declarations
 	@Pointcut("execution(* com.mdtsoft.controller.*.*(..))")
-	public void forControllerPackage() {
+	private void forControllerPackage() {
 
 	}
 
 	@Pointcut("execution(* com.mdtsoft.service.*.*(..))")
-	public void forServicePackage() {
+	private void forServicePackage() {
 
 	}
 
 	@Pointcut("execution(* com.mdtsoft.dao.*.*(..))")
-	public void forDAOPackage() {
+	private void forDAOPackage() {
 
 	}
 	
