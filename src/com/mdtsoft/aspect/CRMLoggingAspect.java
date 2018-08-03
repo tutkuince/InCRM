@@ -18,6 +18,11 @@ public class CRMLoggingAspect {
 	@Before("com.mdtsoft.aspect.AOPExpressions.forAppFlow()")
 	public void before(JoinPoint joinPoint) {
 		
+		// display method we are calling
+		String method = joinPoint.getSignature().toShortString();
+		logger.info("===>>> in @Before: calling method: " + method);
+		
+		// display the arguments to the method
 	}
 	
 	// add @AfterReturning advice
