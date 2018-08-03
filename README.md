@@ -34,3 +34,9 @@ There are 7 layers in this project;
 - Aspect Oriented Programming
 	- AOPExpressions.java for Pointcut declarations
 	- CRMLoggingAspect.java for using @Before and @AfterReturning advices
+	
+**Additional information: "aspect" package was added after the project updated**
+
+- aspect
+	- AOPExpressions
+	- CRMLoggingAspect
