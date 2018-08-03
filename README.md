@@ -1,4 +1,4 @@
-# InCRM - Customer Relationship Manager
+# InCRM - Customer Relationship Manager 1.0
 
 **The aim of this project is to review basic CRUD processes with Spring framework and Hibernate ORM Tool.**
 
