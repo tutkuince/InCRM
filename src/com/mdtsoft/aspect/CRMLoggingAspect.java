@@ -12,8 +12,6 @@ public class CRMLoggingAspect {
 	// setup logger
 	private Logger logger = Logger.getLogger(getClass().getName());
 	
-	// setup pointcut declaration
-	
 	// add @Before advice
 	
 	// add @AfterReturning advice
