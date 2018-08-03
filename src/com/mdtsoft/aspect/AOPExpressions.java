@@ -21,4 +21,9 @@ public class AOPExpressions {
 	public void forDAOPackage() {
 
 	}
+	
+	@Pointcut("forControllerPackage() || forServicePackage() || forDAOPackage()")
+	public void forAppFlow() {
+		
+	}
 }
