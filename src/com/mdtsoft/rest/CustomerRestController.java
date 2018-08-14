@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mdtsoft.model.Customer;
+import com.mdtsoft.rest.error.CustomerNotFoundException;
 import com.mdtsoft.service.CustomerService;
 
 @RestController
@@ -28,7 +29,12 @@ public class CustomerRestController {
 	// add mapping for GET /customers/{customerId}
 	@GetMapping("/customers/{customerId}")
 	public Customer getCustomer(@PathVariable int customerId) {
-		return customerService.getById(customerId);
+		Customer customer = customerService.getById(customerId); 
+		
+		if(customer == null)
+			throw new CustomerNotFoundException("Customer id not found - " + customerId);
+		
+		return customer;
 	}
 
 }
