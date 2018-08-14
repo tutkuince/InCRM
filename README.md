@@ -1,4 +1,4 @@
-# InCRM - Customer Relationship Manager 1.1
+# InCRM - Customer Relationship Manager 1.2
 
 **The aim of this project is to review basic CRUD processes with Spring framework and Hibernate ORM Tool.**
 
@@ -40,3 +40,19 @@ There are 7 layers in this project;
 - aspect
 	- AOPExpressions
 	- CRMLoggingAspect
+	
+## Update 2 - 08/14/2018:
+- Spring REST
+	- CustomerRestController.java for Controller using @RestController
+	- CustomerErrorResponse.java is a pojo class.
+	- CustomerNotFoundException extends RuntimeException
+	- CustomerRestExceptionHandler for defining global exception handler using @ControllerAdvice
+	
+**Additional information: "rest" package was added after the project updated**
+
+- aspect
+	- error
+		- CustomerErrorResponse
+		- CustomerNotFoundException
+		- CustomerRestExceptionHandler
+	- CustomerRestController
