@@ -58,8 +58,14 @@ There are 7 layers in this project;
 	- CustomerRestController.java
 	
 ## Update 3 - 08/17/2018:
-- Spring Security for REST Web Service
-	- SecurityConfig.java for configuration Spring Security
-	- SecurityWebAppInit.java is a Spring Security initializer.
+- Secure REST APIs by Role
+	- EMPLOYEE role can perform following
+		- Get a list of all customers. GET /api/customers
+		- Get a single customer. GET /api/customers/{customerId}
+	- MANAGER role can perform following
+		- Add a new customer. POST /api/customers
+		- Update an existing customer. PUT /api/customers
+	- ADMIN role can perform following
+		- Delete a customer. DELETE /api/customers/{customerId}
 
 - Authentication for Login page
