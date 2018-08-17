@@ -87,7 +87,7 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.0</version>
 		</dependency>
-		
+
 		<!-- SPRING AOP -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -101,14 +101,35 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.9.1</version>
 		</dependency>
-		
+
 		<!-- Jackson -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.6</version>
 		</dependency>
-		
+
+		<!-- Spring Security Web -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>5.0.6.RELEASE</version>
+		</dependency>
+
+		<!-- Spring Security Configuration -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>5.0.6.RELEASE</version>
+		</dependency>
+
+		<!-- Spring Security Taglib support -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>5.0.6.RELEASE</version>
+		</dependency>
+
 	</dependencies>
-	
+
 </project>
