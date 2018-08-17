@@ -56,3 +56,10 @@ There are 7 layers in this project;
 		- CustomerNotFoundException
 		- CustomerRestExceptionHandler
 	- CustomerRestController.java
+	
+## Update 3 - 08/17/2018:
+- Spring Security for REST Web Service
+	- SecurityConfig.java for configuration Spring Security
+	- SecurityWebAppInit.java is a Spring Security initializer.
+
+- Authentication for Login page
